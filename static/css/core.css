@@ -1,25 +1,8 @@
-/* Tasks card */
-.error-block { height: 400px; max-height: 45%; }
-
-.card-body__task { max-height: 550px; max-width: 350px; overflow-y: auto; }
-
-#previewTask .card-body__task img { height: 240px; }
-
-[data-state="new"] { display: none; }
-
-.admin .card-body__task .message__text { padding: .375rem .75rem; }
-.admin .card-body__task textarea { border-color: transparent; resize: none; cursor: pointer; }
-.admin .card-body__task textarea:focus, .admin .card-body__task textarea:hover { border-color: #ced4da; resize: vertical; }
-.admin .card-body__task textarea:focus { cursor: text; }
-
 /* Form validation */
 form .form-control ~ .invalid-feedback { display: block; visibility: hidden; }
 form .form-control:invalid { border-color: red; }
 form .form-control:invalid ~ .invalid-feedback { visibility: visible; }
 form:invalid .form-control[type="submit"] { pointer-events: none; opacity: .5; }
-
-.pagination .page-ellipsis .page-link:hover { background-color: #fff; cursor: default; }
-.pagination .page-ellipsis + .page-ellipsis { display: none; }
 
 /* zzz.com.ua banner */
 .cbalink { position: fixed; bottom: 0; right: 0; border: 1px solid #ddd; padding: 1em 1em 0; border-radius: 5px 0 0 0; -webkit-box-shadow: -2px -2px 5px #cee; box-shadow: -2px -2px 5px #cee; -webkit-transition: all 200ms linear; transition: all 200ms linear; -webkit-transform: scale(0.4); transform: scale(0.4); -webkit-transform-origin: bottom right; transform-origin: bottom right; }
