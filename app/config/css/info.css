@@ -1,0 +1,155 @@
+/*
+ *  @copyright Copyright (c) 2015-2019. DeParadox LLC
+ *  @link http://www.deparadox.com/
+ *  @license http://www.deparadox.com/license/
+ */
+
+/* In page dynamic system information block */
+#debug {
+	position: fixed;
+    overflow: auto;
+	width: auto;
+	max-width:90%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transform: translateX(98%);
+	background: rgba(0,0,0,.75);
+	color: silver;
+	font-size: 12px;
+	font-family: "Courier New", Courier, monospace;
+	padding: 1em;
+	z-index: 1000;
+	transition: all  500ms ease;
+}
+#debug:hover {
+	transform: translateX(0);
+	transition: all 500ms ease;
+}
+#debug pre {
+	color: white;
+}
+#debug p { margin:0; }
+
+
+
+
+figure.modal:hover,
+*:hover ~ figure.modal {
+	display: block;
+}
+
+figure.modal {
+	height: 200px;
+	background: #fee;
+	top:auto;
+	left:auto;
+	padding: .5em;
+	margin:0;
+}
+figure.modal.error {
+	position:fixed;
+	bottom:0;
+	width:1em;
+	height:1em;
+	overflow:hidden;
+}
+figure.modal.error h1 {
+	background:red;
+	margin: -.5rem -.5rem 0;
+	padding: .5rem;
+}
+figure.modal.error :not(:first-child) {
+	overflow: auto;
+}
+figure.modal.error:hover {
+	width: auto;
+	max-width: 60%;
+	height: auto;
+	max-height: 95%;
+}
+figure.modal.error:not(:hover) {
+	background:red;
+}
+figure.modal.error:not(:hover):before {
+	content:'E';
+	display:block;
+	color:white;
+	text-align: center;
+}
+
+
+
+.info {
+	display: block !important;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 3px;
+	color: gray;
+	z-index: 1100;
+}
+.html5 {
+	display: none;
+	position: absolute;
+	width: 261px;
+	height: 70px;
+	margin: -65px 0 0 -28px;
+	background: url('//www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-performance-storage.png') no-repeat;
+}
+.log {
+	max-height: 300px;
+	overflow: auto;
+	margin-bottom: 2px;
+	padding: 3px;
+	background-color: #eee;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	color: gray;
+	font-family: "Courier New", Courier, monospace;
+	font-size: .85em;
+}
+.log p {
+	margin: 0;
+	padding: 0;
+	display: none;
+	font-family: "Courier New", Courier, monospace;
+	font-size: .8em;
+}
+.log p:first-child {
+	display: block;
+	position: fixed;
+	bottom: 3px;
+	right: 3px;
+	border-radius: 5px;
+	padding: 5px;
+	background: #333;
+	border: 1px solid gray;
+	opacity: 0;
+	overflow: hidden;
+	animation: info 5s ease-out 0;
+}
+.info:hover > .php, .info:hover > .html5 {
+	display: block;
+}
+.info:hover > .php:empty, .php {
+	display: none;
+}
+.info:hover {
+	width: 214px;
+}
+.info:hover .log p {
+	opacity: 1;
+	animation: none;
+	display: inherit;
+	position: static;
+	border: none;
+	border-radius: 0;
+	background: transparent;
+	padding: 0;
+}
+@keyframes info{
+	0%  {opacity:0;}
+	10%  {opacity:1;}
+	100% {opacity:0;}
+}

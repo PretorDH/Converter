@@ -1,0 +1,26 @@
+{
+    "name": "deparadox/tasks",
+    "description": "Task schedule for BeeJee",
+    "type": "project",
+    "require": {
+        "bramus/router": "^1.3",
+        "oneforge/forexquotes": "^2.0",
+        "ext-pcre": "*",
+        "ext-json": "*",
+        "ext-PDO": "*",
+        "ext-gd": "*"
+	},
+    "license": "mit",
+    "authors": [
+        {
+            "name": "PretorDH",
+            "email": "pretordh@deparadox.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "app\\": ""
+        }
+    },
+    "minimum-stability": "dev"
+}
